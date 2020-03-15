@@ -9,6 +9,10 @@
 
 namespace BugTrap
 {
+  
+  /// \addtogroup ExampleCode Example code
+  /// @{
+  
   /**
      @brief Planar circle in 2 dimensions.
   */
@@ -40,6 +44,8 @@ namespace BugTrap
   private:
     double radius_;
   };
+
+  ///@}
 }
 
 #endif // CIRCLE_H

@@ -11,24 +11,28 @@
 
 namespace BugTrap
 {
-	/**
-	  @brief Engine dependency injector.
-	  @details This class was adapted from Torgny's blogg @cite BeautifulInjection.
-	 */
-	template <class TEngine>
-	class NeedsEngine : public ICar
-	{
-	public:
-	    explicit NeedsEngine(TEngine& engine);
-	    ~NeedsEngine() = default;
-	    void drive();
-	    void stop();
-	    bool engine_is_running() const;
-	    unsigned int number_of_cylinders() const;
+  /// \addtogroup ExampleCode Example code
+  /// @{
 	
-	private:
-	    TEngine& engine_;
-	};
+  /**
+     @brief Engine dependency injector.
+     @details This class was adapted from Torgny's blogg @cite BeautifulInjection.
+  */
+  template <class TEngine>
+  class NeedsEngine : public ICar
+  {
+  public:
+    explicit NeedsEngine(TEngine& engine);
+    ~NeedsEngine() = default;
+    void drive();
+    void stop();
+    bool engine_is_running() const;
+    unsigned int number_of_cylinders() const;
+	
+  private:
+    TEngine& engine_;
+  };
+  ///@}
 }
 
  

@@ -9,17 +9,21 @@
    @brief Declaration of Morgan Plus 8 class.
  */
  
- namespace BugTrap
- {
+namespace BugTrap
+{
+  /// \addtogroup ExampleCode Example code
+  /// @{
 	
-	/// A particular car instance.
-	class MorganPlus8 : public NeedsEngine<V8Engine>
-	{
-	public:
-	  MorganPlus8();
-	  ~MorganPlus8() = default;
-	private:
-	  V8Engine engine_;
-	};
+  /// A particular car instance.
+  class MorganPlus8 : public NeedsEngine<V8Engine>
+  {
+  public:
+    MorganPlus8();
+    ~MorganPlus8() = default;
+  private:
+    V8Engine engine_;
+  };
+
+  ///@}
 }
 #endif // MORGANPLUS8_H

@@ -8,6 +8,10 @@
 
 namespace BugTrap
 {
+  /// \addtogroup ExampleCode Example code
+  /// @{
+	
+
   /**
      Byte swapper.
      @param[in] value the input value.
@@ -17,6 +21,8 @@ namespace BugTrap
   template <typename T>
   T
   byte_swap(T value );
+
+  ///@}
 }
 
 

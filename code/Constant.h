@@ -8,7 +8,10 @@
 
 namespace BugTrap
 {
-
+  
+  /// \addtogroup ExampleCode Example code
+  /// @{
+  
   /**
      @brief Collection of constants.
      @tparam T type constant.
@@ -23,6 +26,8 @@ namespace BugTrap
     static
     constexpr T pi() { return static_cast<T>(std::acos(-1)); }
   };
+
+  ///@}
 }
 
 #endif // CONSTANT_H

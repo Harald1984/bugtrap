@@ -10,7 +10,8 @@
 
 #include <DbcException.h>
 
-
+/// \addtogroup ExampleCode Example code
+/// @{
 
 
 #ifndef NDEBUG
@@ -29,5 +30,7 @@
 #define POSTCONDITION(value, msg) void()
 #define INVARIANT(value, msg) void()
 #endif
+
+///@}
 
 #endif // DBCMACROS_H

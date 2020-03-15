@@ -9,7 +9,7 @@ namespace BugTrap
   namespace Test  
   {
     
-    /// \addtogroup UnitTests
+    /// \addtogroup UnitTests Unit tests
     /// @{
     
     /// Unit test for the byte_swap function.
