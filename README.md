@@ -37,5 +37,5 @@ These instructions will get you a copy of the project up and running on your loc
 
 ## Authors
 
-* **Harald H. SOleng** - *Initial work* - [harald1984](https://github.com/harald1984)
+* **Harald H. Soleng** - *Initial work* - [Harald H. Soleng](https://github.com/harald1984)
 
