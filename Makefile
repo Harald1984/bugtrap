@@ -58,7 +58,7 @@ unit_test: target
 	$(TARGET) -v
 
 valgrind: target
-	valgrind $(TARGET) -v >& $(BUILD_DIR)/latex/valgrind.tex
+	valgrind $(TARGET) -v >& $(BUILD_DIR)/valgrind.tex
 
 target: $(TARGET)
 
