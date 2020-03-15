@@ -1,0 +1,137 @@
+
+/**
+   \page page3  Documentation
+
+By inspection it is impossible to see if some computer code is correct,
+unless the intended functionality is explained in detail. The only exceptions
+are functions for which the name of a function gives a precise definition of iots functionality.
+However, even for supposedly precise things like
+mathematical functions, differing
+conventions force us to document the detailed
+functionality of any such implementation regarding the supported types,
+range of validity, and its 
+error handling. Hence, fully  self-documenting code is almost as 
+rare as Yetis or Bigfoots.
+
+\section Literate Literate programming
+
+<blockquote>
+The language in which we express our ideas has a strong influence on our thought processes.
+<div id="author">
+Donald E. Knuth
+</div>
+</blockquote>
+Literate programming \cite Knuth:Literate,
+is a total departure
+from the traditional way of writing computer programs.
+Traditionally, the computer programs
+are written in a style and order dictated by the computer.
+Higher level programming languages have only mitigated
+the inherent strangeness of
+the source code to some degree. Literate programs are written like
+the text of an essay or a thesis, using ordinary human language intercepted by
+pseudo code using macro definitions to hide traditional source code.
+In this way, the code is embedded in the documentation,
+and not the other way around as in Javadoc.
+The train of thought
+leading to the code, is in the focus of attention.
+
+
+The programmers writes a literate source file. Using a literate programming tool the
+literate source file is split into a documentation file "woven"
+from the source, and a "tangled" 
+software code ready to be compiled.
+
+Writing a literate program is much like writing a thesis. One is forced to
+explicitly state the thoughts behind the program. Any poorly 
+thought-out design decisions are exposed in plain language, and hence, literate programming leads to higher-quality programs. It also leads to 
+better documentation created along with the program and not as an afterthought.
+The powerful macro system also allows the reader to view the program on many different scales, from a one-page pseudo-code
+overview of a large system, to
+the inner details of a detailed computation, and on all scales the 
+thoughts are presented in plain human language.
+
+
+
+Donald Knuth, who first conceived the literate programming paradigm,
+and coded the first tools for literate programming,
+was so sure about the quality of his TeX \cite Knuth:TeX
+and Metafont programs
+that he offered a cash reward \cite Knuth:AllQuestions for those who found coding errors. 
+
+Now, the quality of TeX as software may have more to do with the programmer,
+than with literate programming, but my personal experience in writing 
+a literate program in a 
+commercial setting supports the Knuth's claim that it results
+in better software. While it took a little longer than usual to 
+complete the first alfa version, it turned out that there were 
+almost no bugs, and hence, the total development time was less than expected. 
+The end result was one of 
+the best programs I ever wrote, despite the fact that 
+it was my first literate program.
+
+
+There are three important disadvantges faced by literate programming.
+<ol>
+<li> Software managers generally oppose such a radical change in programming methodology.</li>
+<li> Most programmers prefer to work they way they are used to./li>
+<li> The IT department does not like the idea of having to support new tools.</li>
+</ol>
+And if you make it pass these three obstacles, the programmers 
+will have to learn how to use a literate programming tool and how to write 
+literate programs. In the end, the programmers may be the worst obstacle.
+I know programmers who keep boasting about never having read any books at all.
+This does not
+promise much for literate programming, I think.
+
+
+
+\section ExtractableDocs Extractable documentation
+<blockquote>Any code of your own that you haven’t looked at for six or more months might as well have been written by someone else.
+<div id="author">
+Eagleson’s Law
+</div>
+</blockquote>
+
+The second best form of documenting code is by means of extractable code 
+documentation. Doxygen \cite Doxygen
+is the de facto standard tool for generating 
+documentation from annotated C++ sources. It is an excellent tool 
+which can extract the code structure from undocumented source code. The programmers can expand the documentation by adding explanatory text, 
+mathematical formulae and even figures and illustrations. Naturally, 
+the generated documentation is bound to be structured closely 
+along the lines of the code. It does not 
+become a freely flowing text as one can make with literate programming. 
+Nevertheless, extractable documentation is probably the best one can hope for in most organizations.
+
+
+\section WhtDocument Why document
+<blockquote>
+Documentation is a love letter that you write to your future self.
+<div id="author">
+Damian Conway
+</div>
+</blockquote>
+
+Sometimes one hears that the code should be
+self-documenting. Good
+naming of classes, functions and variables, uniform
+naming conventions and consistent programming style aids in
+the readability of the code. However, for code to be used across various
+branches of knowledge, words that have an obvious meaning to the programmer,
+may be less transparent to others. I remember a bug-ridden geological fault
+modelling software sometimes resulting in segmentation faults. A structural
+geologist, familiar with all forms of geological faults, was puzzled by
+this strange kind of faults. This example goes to the point I was making
+about the need to define words so that they are understood across all
+academic disciplines. Normally this cannot be done in code alone, without
+the help of documentation texts and references to books and scientific articles.
+
+A programmer typically knows thousands of functions in hundreds of classes while in the middle of a programming project.
+As the code is written, it is
+fairly obvious how things work. But come back five years later, and try to add
+a new feature to the system. Now the code is much less transparent.
+When you find yourself in this situation, you will praise
+the presence of good code documentation.
+
+*/
