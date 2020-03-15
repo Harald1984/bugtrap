@@ -23,6 +23,8 @@ CPPFLAGS ?= $(INC_FLAGS) -O3 -Wall -DNDEBUG -MMD -MP
 endif
 LINKFLAGS := -L$(BUILD_DIR)  -lcode -lgcov -l$(GOOGLE_TEST_LIB)
 
+all: doxygen
+
 $(TARGET): $(LIB) $(TEST_OBJS)
 	$(CXX)  $(TEST_OBJS) $(LIB) $(LINKFLAGS)   -o $@
 
@@ -38,6 +40,7 @@ $(BUILD_DIR)/%.o: %.cpp
 
 
 .PHONY: clean
+
 
 coverage: unit_test
 	lcov  --capture --directory $(BUILD_DIR)/$(SRC_DIRS)  --directory $(BUILD_DIR)/$(TEST_DIRS)  --output-file $(BUILD_DIR)/coverage.info
