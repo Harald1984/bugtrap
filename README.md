@@ -5,7 +5,7 @@ covers general principles, but the examples are taken from C++.
 
 ## Bugtrap: How to code with fewer bugs
 
-[Bugtrap] https://github.com/harald1984
+[Bugtrap](https://github.com/harald1984/html/index.html)
 
 ## Getting Started
 
