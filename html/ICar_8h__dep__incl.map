@@ -1,0 +1,8 @@
+<map id="ICar.h" name="ICar.h">
+<area shape="rect" id="node1" title="Declaration of car interface." alt="" coords="207,5,266,32"/>
+<area shape="rect" id="node2" href="$NeedsEngine_8h.html" title="Declaration of car engine dependency injector." alt="" coords="177,80,296,107"/>
+<area shape="rect" id="node3" href="$MorganPlus8_8h.html" title="Declaration of Morgan Plus 8 class." alt="" coords="97,155,214,181"/>
+<area shape="rect" id="node6" href="$NeedsEngineTest_8cpp.html" title="Unit tests for NeedsEngine class." alt="" coords="238,155,398,181"/>
+<area shape="rect" id="node4" href="$MorganPlus8_8cpp.html" title="Implementation of Morgan Plus 8 class." alt="" coords="5,229,137,256"/>
+<area shape="rect" id="node5" href="$MorganPlus8Test_8cpp.html" title="Unit tests for MorganPlus8 class." alt="" coords="161,229,320,256"/>
+</map>

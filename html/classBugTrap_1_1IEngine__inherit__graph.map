@@ -1,0 +1,5 @@
+<map id="BugTrap::IEngine" name="BugTrap::IEngine">
+<area shape="rect" id="node1" title="Interface for engines." alt="" coords="133,5,264,32"/>
+<area shape="rect" id="node2" href="$classBugTrap_1_1Test_1_1EngineMock.html" title="Engine mockup for test purposes." alt="" coords="5,80,200,107"/>
+<area shape="rect" id="node3" href="$classBugTrap_1_1V8Engine.html" title="A V8 engine type." alt="" coords="225,80,367,107"/>
+</map>

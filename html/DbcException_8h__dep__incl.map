@@ -1,0 +1,13 @@
+<map id="DbcException.h" name="DbcException.h">
+<area shape="rect" id="node1" title="Declaration of design by contract exception." alt="" coords="375,5,498,32"/>
+<area shape="rect" id="node2" href="$DbcMacros_8h.html" title="Design by contract macros." alt="" coords="221,80,327,107"/>
+<area shape="rect" id="node9" href="$DbcExceptionTest_8cpp.html" title=" " alt="" coords="320,155,484,181"/>
+<area shape="rect" id="node10" href="$DbcException_8cpp.html" title="Implementation of design by contract exception." alt="" coords="421,80,559,107"/>
+<area shape="rect" id="node11" href="$CircleTest_8cpp.html" title="Unit tests for Circle class." alt="" coords="583,80,695,107"/>
+<area shape="rect" id="node3" href="$Circle_8cpp.html" title="Implementation of the Circle class." alt="" coords="67,155,153,181"/>
+<area shape="rect" id="node4" href="$NeedsEngine_8h.html" title="Declaration of car engine dependency injector." alt="" coords="177,155,296,181"/>
+<area shape="rect" id="node5" href="$MorganPlus8_8h.html" title="Declaration of Morgan Plus 8 class." alt="" coords="97,229,214,256"/>
+<area shape="rect" id="node8" href="$NeedsEngineTest_8cpp.html" title="Unit tests for NeedsEngine class." alt="" coords="238,229,398,256"/>
+<area shape="rect" id="node6" href="$MorganPlus8_8cpp.html" title="Implementation of Morgan Plus 8 class." alt="" coords="5,304,137,331"/>
+<area shape="rect" id="node7" href="$MorganPlus8Test_8cpp.html" title="Unit tests for MorganPlus8 class." alt="" coords="161,304,320,331"/>
+</map>

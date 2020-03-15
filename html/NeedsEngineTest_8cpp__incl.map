@@ -1,0 +1,11 @@
+<map id="NeedsEngineTest.cpp" name="NeedsEngineTest.cpp">
+<area shape="rect" id="node1" title="Unit tests for NeedsEngine class." alt="" coords="133,5,293,32"/>
+<area shape="rect" id="node2" href="$NeedsEngine_8h.html" title="Declaration of car engine dependency injector." alt="" coords="29,80,147,107"/>
+<area shape="rect" id="node8" href="$IEngine_8h.html" title="Engine interface declaration." alt="" coords="172,80,255,107"/>
+<area shape="rect" id="node9" title=" " alt="" coords="279,80,383,107"/>
+<area shape="rect" id="node3" href="$ICar_8h.html" title="Declaration of car interface." alt="" coords="5,155,64,181"/>
+<area shape="rect" id="node4" href="$DbcMacros_8h.html" title="Design by contract macros." alt="" coords="89,155,194,181"/>
+<area shape="rect" id="node5" href="$DbcException_8h.html" title="Declaration of design by contract exception." alt="" coords="80,229,203,256"/>
+<area shape="rect" id="node6" title=" " alt="" coords="50,304,137,331"/>
+<area shape="rect" id="node7" title=" " alt="" coords="161,304,220,331"/>
+</map>

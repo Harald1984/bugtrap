@@ -1,0 +1,8 @@
+<map id="NeedsEngine.h" name="NeedsEngine.h">
+<area shape="rect" id="node1" title="Declaration of car engine dependency injector." alt="" coords="29,5,147,32"/>
+<area shape="rect" id="node2" href="$ICar_8h.html" title="Declaration of car interface." alt="" coords="5,80,64,107"/>
+<area shape="rect" id="node3" href="$DbcMacros_8h.html" title="Design by contract macros." alt="" coords="89,80,194,107"/>
+<area shape="rect" id="node4" href="$DbcException_8h.html" title="Declaration of design by contract exception." alt="" coords="80,155,203,181"/>
+<area shape="rect" id="node5" title=" " alt="" coords="50,229,137,256"/>
+<area shape="rect" id="node6" title=" " alt="" coords="161,229,220,256"/>
+</map>
