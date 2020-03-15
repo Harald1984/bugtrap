@@ -1,6 +1,7 @@
 GOOGLE_TEST_LIB = gtest
 
 BUILD_DIR ?= ./build
+HTML_DIR ?= ./html
 SRC_DIRS ?= ./code
 TEST_DIRS ?= ./unit_tests
 
@@ -48,7 +49,7 @@ coverage: unit_test
 	genhtml --prefix /home/$(USER) $(BUILD_DIR)/unit.tests -t 'Unit test coverage' \
 	--css-file doc/coverage.css \
 	--html-epilog  doc/coverage_footer.html \
-	--output-directory  $(BUILD_DIR)/html
+	--output-directory  $(HTML_DIR)
 
 
 doxygen: $(SRCS) coverage valgrind
