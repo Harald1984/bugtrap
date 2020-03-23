@@ -4,7 +4,8 @@
 
 By inspection it is impossible to see if some computer code is correct,
 unless the intended functionality is explained in detail. The only exceptions
-are functions for which the name of a function gives a precise definition of iots functionality.
+are functions for which the name of a function gives a precise
+definition of its functionality.
 However, even for supposedly precise things like
 mathematical functions, differing
 conventions force us to document the detailed
@@ -34,7 +35,7 @@ pseudo code using macro definitions to hide traditional source code.
 In this way, the code is embedded in the documentation,
 and not the other way around as in Javadoc.
 The train of thought
-leading to the code, is in the focus of attention.
+leading to the code, is the focus of attention.
 
 
 The programmers writes a literate source file. Using a literate programming tool the
@@ -62,9 +63,9 @@ that he offered a cash reward \cite Knuth:AllQuestions for those who found codin
 Now, the quality of TeX as software may have more to do with the programmer,
 than with literate programming, but my personal experience in writing 
 a literate program in a 
-commercial setting supports the Knuth's claim that it results
+commercial setting supports Knuth's claim that it results
 in better software. While it took a little longer than usual to 
-complete the first alfa version, it turned out that there were 
+complete the first alpha version, it turned out that there were 
 almost no bugs, and hence, the total development time was less than expected. 
 The end result was one of 
 the best programs I ever wrote, despite the fact that 

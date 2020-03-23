@@ -2,17 +2,18 @@
    \page page6 The work process
 
 
-\section Macroscopic Macroscopic view
+\section Macroscopic Software development process
 
-Historically software development followed the <em>waterfall process</em>. This is a sequential process. First the software requirements
+Historically, software development followed the <em>waterfall process</em>. This is a sequential process. First the software requirements
 specification (SRS) 
 document was established.
-Then the software architecture is decided and described in an architecture describtion language (ADL), a universal modelling language (UML), or a system modelling language (SysML).
-Implementation follows, then testing and integration, deplyment and maintenance.
+Then the software architecture was decided and described in an architecture describtion language (ADL),
+the unified modeling language (UML), or the system modeling language (SysML).
+Implementation follows, then testing and integration, deployment and maintenance.
 
 
 In practice, such a sequential workflow is almost impossible to follow. The V-model
-is a more realistic extension of the waterfall model.  The left-to-right axis
+is an extension of the waterfall model.  The left-to-right axis
 represents time and the vertical axis level of abstraction. The conventional V-model
 has horizontal arrows directed in the time direction, but
 in the V-model figure below, I have used two-way  horizontal arrows. This is in recognition of the iterative nature of software development.
@@ -24,17 +25,21 @@ More often than not, issues found on the right-hand-side of the V forces one to 
 The last decades agile development processes such as scrum
 have become popular. They adopt a
 people-centric perspective and incorporate iteration and continuous feedback.
-The spiral model illustrated in the figure below. Prototypes may well evolve over several revolutions of the spiral. In the figure only one prototype is developed.
+The spiral model illustrated in the figure below. Prototypes always evolve over several revolutions of the spiral.
+In the figure only one prototype is developed.
 This development model is advisable if the users are unsure of their needs, 
 the requirements are complex, or if significant a amount of research and exploration is needed.
 
 ![Spiral-model](spiral.jpg  "Spiral model" )
 
 
-Whatever development model is used, the most important thing is to have clear specifications of the classes
-and functions when their implementation starts.
-This does not mean that all classes and functions must
-have their design ready before implementation starts.
+Whatever development model is used, the most important thing is to have a clear
+specification of the required functionality when implementation starts.
+Without knowing the target, it will be hard to catch.
+This is not to say that the target will be fixed at the outset.
+Often in research oriented projects,
+the target moves during development, but to avoid delays and extra costs, the
+target should be more or less fixed at the end of the prototyping stage.
 
 \section Version-Control Version control
 
@@ -43,7 +48,8 @@ let us look at the day-to-day process. Nowadays, almost every software
 project from the smallest hobby project to large corporate projects
 use a software version control system.
 
-Consider the version control workflow illustrated below. There is a main developer branch
+Consider the version control workflow illustrated below.
+There is a main developer branch
 and a release branch. Developer A clones from the main branch
 baseline \f$M_0\f$ and gets version \f$A_0\f$. When A is finished with her work,
 she submits her work \f$A_1\f$ for pushing into the main branch.
@@ -59,7 +65,7 @@ It is important that this test suite can be built and run in a few minutes.
  automation server tests pass,
 the code is sent to a review board for evaluation.
 As soon as the review board approves the submission,
-Jenkins should automatically trigger builds
+the automation server  should trigger builds
 on all relevant platforms as well as running all available unit tests,
 integration tests, and system tests. When all tests pass,
 a new sound baseline is created.
@@ -72,7 +78,8 @@ If the full test process takes too much time, one may have to
 adopt a faster integration scheme, where full  test suits are carried
 out after baseline creation instead of before.
 In this case, there is no guarantee that a baseline passes all tests.
-If this process is adopted, it may be useful to have a separate branch into which only sound baselines are merged automatically.
+If this process is adopted, it may be useful to have a
+separate branch into which only sound baselines are merged automatically.
 
 Use a separate release branch for each software release.
 When the release branch is ready

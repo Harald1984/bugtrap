@@ -20,13 +20,13 @@ back after having been swept under the rug, they bite harder.
 Fixing a bug
 at the quality assurance testing stage
 is ten times more expensive than fixing it at code review.
-Bug fixing after the software has been rolled out to customers is a hundred times more expensive \cite Cohen:PeerCodeReview.
+Bug fixing after the software has been rolled out to
+customers is a hundred times more expensive \cite Cohen:PeerCodeReview.
 
-This book is a short. The appendices with generated documentation
-and test coverage output for the code examples make up
-the biggest part of the book.
+This book is short. Many important topics are only briefly touched
+upon and the book could benefit much from further work in many directions. That is why I publish this work in progress on Github and encourage others to pick
+up the baton and carry it further.
 
-I would like to thank the Norwegian Non-Fiction Writers and Translators Organisation for supporting this book with a scholarship.
 With a background in theoretical physics, I never had
 much formal training in computer science except an introductory course
 in the Simula programming language (the first object oriented
@@ -38,12 +38,11 @@ I was given a sabbatical period from the Norwegian Computing Center for
 working on the project.
 I am grateful for the flying start this gave me.
 
-I would like to thank the Norwegian Non-Fiction Writers and Translators Association for supporting this work. I would also like to thank Daniel Bakkelund for helpful comments and suggestions and for taking the time to read the manuscript. 
-
-
-
-
-
+I would like to thank the Norwegian Non-Fiction Writers and
+Translators Association for supporting this work.
+I would also like to thank Daniel Bakkelund for
+taking the time to read the manuscript and
+for helpful comments and suggestions.
 
 
 

@@ -18,7 +18,7 @@ Karl Popper
 For code to be testable in practice,
 it has to be designed with testability in mind. 
 For the most fundamental building blocks,
-like the `class Circle`,
+like the <a href="classBugTrap_1_1Circle.html"><tt>class Circle</tt></a>,
 there are no dependency on other units, and unit testing is
 relatively straightforward.
 
@@ -26,12 +26,13 @@ Yet, if full test-coverage is required in parameter space,
 the combinatorical explosion as discussed in \ref GoodUnitTests
 must be avoided. The key point is to divide functionality
 into simple classes and functions with as few parameters as possible.
-The <em>single responsibility principle</em> is a useful guideline
+The <em>single responsibility principle</em> or <em>separation of concerns</em> \cite Dijkstra:SoC
+is a useful guideline
 in this respect: every class or module should have responsibility
 over a single part of functionality. As soon as you have to use the word
 <span class="quote">and</span> when describing the action of a class,
 the alarm shoud go off.
-It is a sign of mixing of concerns.
+It is a sign of mixing of concerns. 
 
 This principle leads to a large number of simple classes,
 and sometimes people will complain about the number of classes in the code. To this I say, it is better to have a linearly growing number of simple classes
@@ -47,12 +48,11 @@ Faced with the need to set up myraids of helper classes and mockups,
 which have to be changed each time their interfaces change,
 developers give up on unit testing and decide
 to rely on system tests, only. This problem can be
-mitigated if one follows the principle of
-dependency injection.
-Look at the
-`class MorganPlus8`.
-It is derived from the general `class ICar` interface.
-Many of the car functionalities needs an engine to be carried out. In software
+mitigated by following the principle of
+<em>dependency injection</em>.
+Look at the <a href="classBugTrap_1_1MorganPlus8.html"><tt>class MorganPlus8</tt></a>.
+It is derived from the general <a href="classBugTrap_1_1ICar.html"><tt>class ICar</tt></a> interface.
+Many of the car functionalities needs an engine to be carried out. In software,
 one could inject the engine depedency through the car constructor,
 or through a set function,
 so that the car functionality could be tested with a mockup engine.
@@ -63,23 +63,13 @@ there would be a terribly long list of constructor arguments.
 This would make the code messy and hard to maintain.
 
 The template based solution \cite BeautifulInjection
-with the `NeedsEngine` template class,
+with the <a href="classBugTrap_1_1NeedsEngine.html"><tt>NeedsEngine</tt></a> template class,
 solves this problem by leaving the concrete car constructors
-like the `class MorganPlus8` clean, and still allows
+like the <a href="classBugTrap_1_1MorganPlus8.html"><tt>class MorganPlus8</tt></a> clean, and still allows
 dependency injection of the engine into a testable implementation.
 Hence the engine-dependent functionality can be tested with a mockup engine.
 
 
-
-\section ValuesAndServieApart Keep value classes and service classes apart
-
-Value objects are simply holders of values. They have many setters and getters
-and are simple to construct. Normally, they don't even need an interface
-because they never need to be mocked away. Service-objects do interesting work.
-They should have interfaces since they are candidates for mocking.
-
-A value class should never take service objects in its constructor,
-and a service class should never take value objects. 
 
 
 \section Polymorphism Use polymorphism instead of conditionals
@@ -99,24 +89,28 @@ a number of conditionals and modify existing unit test suite.
 Thus, the single class solution grows in complexity and
 for each new variant, there is a risk of introducing new bugs in existing code.
 
+The polymorphism approach satisfies the <em>open/cosed principle</em>.\cite OpenClosedPrinciple
+Software enteties should be open for extensions, but closed for modifications. 
+
+
 
 
 \section NoConstructorWork Don't let the constructor do work
 
 Remember that you have to test all functions in your class.
-Each test should be carried oout independently from the others.
+Each test should be carried out independently from the others.
 Hence, you need a fresh instance of the class object set in
 the required state before carrying out each test.
 This means that the constructor must be called
 before each function test in the test suite of the class.
-The same holds for any other test suites
-dependent on the class. For large projects the complete
-test suite may become very large and time-consuming to carry out.
+The same goes for any other test suite
+dependent on the class. For large projects, the complete
+test suite may become very large and time-consuming to run.
 Especially when run with memory error detectors such as valgrind,
-the testing becomes slow. Obviously, one does not want
+the testing becomes slow. Obviously, one does not want complicated
 constructor work to be carried out over and over again.
 Hence, do as little work as possible in the constructor,
-and preferably nothing than assigning dependencies into the fields.
+and preferably nothing than assigning dependencies to the fields.
 
 
 
@@ -124,8 +118,8 @@ and preferably nothing than assigning dependencies into the fields.
 
 Variables with global scope makes software hard to understand.
 They are like ghosts which can show up anywhere without
-passing through visible doors or backdoors. In a magic manner they influence
-code and may themselves be modified everywhere.  Global variables are
+passing through visible doors or backdoors. In a magic manner, they influence
+code and may themselves be modified anywhere.  Global variables are
 the exact opposite to the sound advice of minimizing scope of variables.
 
 
@@ -151,7 +145,7 @@ run-time polymorphism.
 
 
 For the lazy programmer, and yes, we have to admit it,
-we are all lazy, implementation inheritance looks as a cheap way of
+we are all lazy, implementation inheritance looks like a cheap way of
 reusing implementation from one class in another. The drawback is that
 you not only inherits the functionality you need, but the whole
 interface of the class. Inheritance breaks encapsulation.
@@ -166,7 +160,8 @@ According to the composite reuse principle
 (CRP) 
 one should favor delegation over inheritance as a reuse mechanism.
 The price to pay are simple forwarding methods, but the bonus is that
-you can control behaviour in unit tests with dependency injection.
+you can control behaviour in unit tests with dependency injection. Inheritance, on the other hand,
+makes dependency injection impossible.
 
 
 */

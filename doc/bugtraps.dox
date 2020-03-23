@@ -112,16 +112,32 @@ In real code you may want to have different testing levels depending on the
 state of your code, and possibly catch the exceptions and log the user input and
 the errors to  a log file for easier debugging.
 
+For very well tested code, where performance is of
+the essence, and
+where run-time errors are guaranteed never to happen,
+the assertions can be turned off in release builds. 
+
+One could ask if it is acceptable to have Dbc macros that contain logic,
+and that are turned off in release builds. Design by contract is used during a software's 
+development and test-phase to facilitate earlier and more specific error detection. As such it is a development tool
+and it must be acceptable to ship the final product wihtout these tools. After all,
+in  bug-free code,
+contract conditions are never violated during execution. 
+
 
 \section MemoryErrorTools Memory error detection tools
 
 Another aspect of run-time testing is to run a memory error detector
 such as `valgrind'. Such tools detect use of
-uninitialized memory, errounous memory access, and memory leaks. Below is a transcript of a valgrind run of the example unit tests:
+uninitialized memory, errounous memory access, and memory leaks.
+Below is a transcript of a valgrind run of the example unit tests:
 \include valgrind.tex
-In this case there were no memory leaks and no errors. If your code produces strange errors, perhaps errors that are
-irreproducible, then always check the code with a memory error detector before debugging. It could save you a lot of time.
-For the same reason, all baselines of your main branch should be checked for memory errors.
+In this case there were no memory leaks and no errors.
+If your code produces strange errors, perhaps errors that are
+irreproducible, then always check the code with a memory
+error detector before debugging. It could save you a lot of time.
+For the same reason, all baselines of your main branch should
+be checked for memory errors.
 
 
 \section Continuous Continuous integration and automated testing
@@ -167,9 +183,9 @@ injecting the engine dependency in a car class.
 
 
 
-Each method should be tested 
+Each unit should be tested 
 in a separate test so that the failure of a test
-easily is traced back to the offending unit.
+easily is traced back to the offending code lines.
 Unit tests are often collected in test suites,
 where a suite often correspond to a whole class or a module.
 
@@ -260,16 +276,10 @@ of combinations to test. Consider a n-parameter function \f$f(x_0,\ldots, x_{n-1
 with valid parameters \f$x_i \in [x_{\text{min}(i)},x_{\text{max}(i)}]\f$.
 Testing the limits, beyond limits and in the middle, gives five
 test values per parameter.
-There are then \f$5^n\f$ combinations to test for this function. Already at three parameters, the situation is daunting.
-
-Run-time errors such as illegal input to functions
-should be caught by assertions or exceptions.
-For very well tested code, where performance is of
-the essence, and
-where run-time errors are guaranteed never to happen,
-the assertions can be turned off in release builds.
-
-
+There are then \f$5^n\f$ combinations to test for this function.
+Already at three parameters, the situation is daunting. Yet, one could write an algorithm to produce the input.
+Of course, this raises the
+question of how to test the testing tools.
 
 
 \section Integration Integration  testing
@@ -314,10 +324,10 @@ replaced with stubs or mockups (top-down testing). More often than not,
 a combination of these two scheemes is used. Postponing system testing
 until everything else is finished is very risky. If something is amiss,
 a lot of interfaces may have to change. On the other hand,
-a full verification of all the system requirements is not possible until
+a full verification of the system requirements is not possible until
 all the code is in place. Hence, a combined approach is called for.
 
-Ideally there should be one test for each system requirement.
+Ideally, there should be one test for each system requirement.
 A test description for each of these tests should be available when implementation of its realization starts.
 Then one can implement a test before the requirement is met by the system.
 
@@ -333,6 +343,12 @@ The tests should be built and run on all
 the relevant computer platforms.
 
 \section BugTrapConclusion Concluding remarks on bug traps
+
+In this chapter we have covered methods and tools to detect bugs before they enter the code base, such as pair programming and code review.
+The importance of unit testing to guard against creating bugs when first implementing code or during refactoring. Turning on design by contract run-time tests
+may detect
+wrong use or internal errors in classes and functions during development and test phases.
+Integration and system testing detects bugs originating when units are combined into a whole.
 
 
 */

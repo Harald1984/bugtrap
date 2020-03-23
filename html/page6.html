@@ -76,19 +76,19 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><h1><a class="anchor" id="Macroscopic"></a>
-Macroscopic view</h1>
-<p>Historically software development followed the <em>waterfall process</em>. This is a sequential process. First the software requirements specification (SRS) document was established. Then the software architecture is decided and described in an architecture describtion language (ADL), a universal modelling language (UML), or a system modelling language (SysML). Implementation follows, then testing and integration, deplyment and maintenance.</p>
-<p>In practice, such a sequential workflow is almost impossible to follow. The V-model is a more realistic extension of the waterfall model. The left-to-right axis represents time and the vertical axis level of abstraction. The conventional V-model has horizontal arrows directed in the time direction, but in the V-model figure below, I have used two-way horizontal arrows. This is in recognition of the iterative nature of software development. More often than not, issues found on the right-hand-side of the V forces one to rethink stuff on the left-hand-side.</p>
+Software development process</h1>
+<p>Historically, software development followed the <em>waterfall process</em>. This is a sequential process. First the software requirements specification (SRS) document was established. Then the software architecture was decided and described in an architecture describtion language (ADL), the unified modeling language (UML), or the system modeling language (SysML). Implementation follows, then testing and integration, deployment and maintenance.</p>
+<p>In practice, such a sequential workflow is almost impossible to follow. The V-model is an extension of the waterfall model. The left-to-right axis represents time and the vertical axis level of abstraction. The conventional V-model has horizontal arrows directed in the time direction, but in the V-model figure below, I have used two-way horizontal arrows. This is in recognition of the iterative nature of software development. More often than not, issues found on the right-hand-side of the V forces one to rethink stuff on the left-hand-side.</p>
 <div class="image">
 <img src="v-model.jpg" alt="v-model.jpg"/>
 <div class="caption">
 V-model</div></div>
-<p>The last decades agile development processes such as scrum have become popular. They adopt a people-centric perspective and incorporate iteration and continuous feedback. The spiral model illustrated in the figure below. Prototypes may well evolve over several revolutions of the spiral. In the figure only one prototype is developed. This development model is advisable if the users are unsure of their needs, the requirements are complex, or if significant a amount of research and exploration is needed.</p>
+<p>The last decades agile development processes such as scrum have become popular. They adopt a people-centric perspective and incorporate iteration and continuous feedback. The spiral model illustrated in the figure below. Prototypes always evolve over several revolutions of the spiral. In the figure only one prototype is developed. This development model is advisable if the users are unsure of their needs, the requirements are complex, or if significant a amount of research and exploration is needed.</p>
 <div class="image">
 <img src="spiral.jpg" alt="spiral.jpg"/>
 <div class="caption">
 Spiral-model</div></div>
-<p>Whatever development model is used, the most important thing is to have clear specifications of the classes and functions when their implementation starts. This does not mean that all classes and functions must have their design ready before implementation starts.</p>
+<p>Whatever development model is used, the most important thing is to have a clear specification of the required functionality when implementation starts. Without knowing the target, it will be hard to catch. This is not to say that the target will be fixed at the outset. Often in research oriented projects, the target moves during development, but to avoid delays and extra costs, the target should be more or less fixed at the end of the prototyping stage.</p>
 <h1><a class="anchor" id="Version-Control"></a>
 Version control</h1>
 <p>Turning from the process on the macroscopic project level, let us look at the day-to-day process. Nowadays, almost every software project from the smallest hobby project to large corporate projects use a software version control system.</p>
@@ -97,7 +97,7 @@ Version control</h1>
 <img src="version-control.jpg" alt="version-control.jpg"/>
 <div class="caption">
 Version control workflow</div></div>
-<p>The developer submits the candidate to review. This submission triggers a selected set of builds and tests by an automation server. It is important that this test suite can be built and run in a few minutes. If the tests fail, the submission is not approved and the developer has to fix the bugs and submit once more. When the pre-review automation server tests pass, the code is sent to a review board for evaluation. As soon as the review board approves the submission, Jenkins should automatically trigger builds on all relevant platforms as well as running all available unit tests, integration tests, and system tests. When all tests pass, a new sound baseline is created. This process guarantees that every baseline of the master builds and passes all tests.</p>
+<p>The developer submits the candidate to review. This submission triggers a selected set of builds and tests by an automation server. It is important that this test suite can be built and run in a few minutes. If the tests fail, the submission is not approved and the developer has to fix the bugs and submit once more. When the pre-review automation server tests pass, the code is sent to a review board for evaluation. As soon as the review board approves the submission, the automation server should trigger builds on all relevant platforms as well as running all available unit tests, integration tests, and system tests. When all tests pass, a new sound baseline is created. This process guarantees that every baseline of the master builds and passes all tests.</p>
 <div class="image">
 <img src="main-push.jpg" alt="main-push.jpg"/>
 <div class="caption">

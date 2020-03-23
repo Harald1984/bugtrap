@@ -4,10 +4,7 @@
 
 Software is invading more and more aspects of life.
 Even simple things like time-keeping is nowadays
-dependent upon GPS satellites and software. Software bugs or active
-spoofing \cite GPSSpoofing:MarEx \cite Hambling:GpsSpoofing 
-of the GPS signals,
-may give wrong time and positioning data.
+dependent upon GPS satellites and software.
 With software controlling more and more of society,
 we are increasingly dependent upon
 safe and bugfree software. As history has shown,
