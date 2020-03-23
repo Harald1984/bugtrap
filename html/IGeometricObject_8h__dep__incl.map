@@ -1,6 +1,0 @@
-<map id="IGeometricObject.h" name="IGeometricObject.h">
-<area shape="rect" id="node1" title="Declaration of GeometricObject interface." alt="" coords="36,5,184,32"/>
-<area shape="rect" id="node2" href="$Circle_8h.html" title="Declaration of Circle class." alt="" coords="75,80,145,107"/>
-<area shape="rect" id="node3" href="$Circle_8cpp.html" title="Implementation of the Circle class." alt="" coords="5,155,92,181"/>
-<area shape="rect" id="node4" href="$CircleTest_8cpp.html" title="Unit tests for Circle class." alt="" coords="117,155,229,181"/>
-</map>

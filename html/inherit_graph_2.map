@@ -1,6 +1,0 @@
-<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classBugTrap_1_1ICar.html" title="Car interface class." alt="" coords="5,46,113,73"/>
-<area shape="rect" id="node2" href="$classBugTrap_1_1NeedsEngine.html" title="Engine dependency injector." alt="" coords="161,5,328,47"/>
-<area shape="rect" id="node3" href="$classBugTrap_1_1NeedsEngine.html" title=" " alt="" coords="161,71,328,112"/>
-<area shape="rect" id="node4" href="$classBugTrap_1_1MorganPlus8.html" title="A particular car instance." alt="" coords="376,78,541,105"/>
-</map>

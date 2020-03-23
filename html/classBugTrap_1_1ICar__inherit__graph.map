@@ -1,6 +1,0 @@
-<map id="BugTrap::ICar" name="BugTrap::ICar">
-<area shape="rect" id="node1" title="Car interface class." alt="" coords="129,5,237,32"/>
-<area shape="rect" id="node2" href="$classBugTrap_1_1NeedsEngine.html" title="Engine dependency injector." alt="" coords="5,80,172,121"/>
-<area shape="rect" id="node3" href="$classBugTrap_1_1NeedsEngine.html" title=" " alt="" coords="196,80,363,121"/>
-<area shape="rect" id="node4" href="$classBugTrap_1_1MorganPlus8.html" title="A particular car instance." alt="" coords="197,169,362,196"/>
-</map>
