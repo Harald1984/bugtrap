@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Date:</td>
-            <td class="headerValue">2020-03-23 18:53:52</td>
+            <td class="headerValue">2020-03-23 19:08:07</td>
             <td></td>
           </tr>
           <tr><td><img src="../../glass.png" width=3 height=3 alt=""></td></tr>
@@ -81,7 +81,7 @@
 <a name="23"><span class="lineNum">      23 </span>            :   {</a>
 <a name="24"><span class="lineNum">      24 </span>            :   public:</a>
 <a name="25"><span class="lineNum">      25 </span>            :     explicit NeedsEngine(TEngine&amp; engine);</a>
-<a name="26"><span class="lineNum">      26 </span><span class="lineCov">        344 :     ~NeedsEngine() = default;</span></a>
+<a name="26"><span class="lineNum">      26 </span><span class="lineCov">        376 :     ~NeedsEngine() = default;</span></a>
 <a name="27"><span class="lineNum">      27 </span>            :     void drive();</a>
 <a name="28"><span class="lineNum">      28 </span>            :     void stop();</a>
 <a name="29"><span class="lineNum">      29 </span>            :     bool engine_is_running() const;</a>
@@ -98,24 +98,24 @@
 <a name="40"><span class="lineNum">      40 </span>            :    Parametric constructor for injecting the engine dependency.</a>
 <a name="41"><span class="lineNum">      41 </span>            :  */</a>
 <a name="42"><span class="lineNum">      42 </span>            : template &lt;class TEngine&gt;</a>
-<a name="43"><span class="lineNum">      43 </span><span class="lineCov">        344 : BugTrap::NeedsEngine&lt;TEngine&gt;::NeedsEngine(TEngine&amp; engine)</span></a>
-<a name="44"><span class="lineNum">      44 </span><span class="lineCov">        344 :     : engine_(engine)</span></a>
+<a name="43"><span class="lineNum">      43 </span><span class="lineCov">        376 : BugTrap::NeedsEngine&lt;TEngine&gt;::NeedsEngine(TEngine&amp; engine)</span></a>
+<a name="44"><span class="lineNum">      44 </span><span class="lineCov">        376 :     : engine_(engine)</span></a>
 <a name="45"><span class="lineNum">      45 </span>            : {</a>
-<a name="46"><span class="lineNum">      46 </span><span class="lineCov">        344 : }</span></a>
+<a name="46"><span class="lineNum">      46 </span><span class="lineCov">        376 : }</span></a>
 <a name="47"><span class="lineNum">      47 </span>            : </a>
 <a name="48"><span class="lineNum">      48 </span>            : /**</a>
 <a name="49"><span class="lineNum">      49 </span>            :    Drive.</a>
 <a name="50"><span class="lineNum">      50 </span>            :  */</a>
 <a name="51"><span class="lineNum">      51 </span>            : template &lt;class TEngine&gt;</a>
 <a name="52"><span class="lineNum">      52 </span>            : void</a>
-<a name="53"><span class="lineNum">      53 </span><span class="lineCov">        172 : BugTrap::NeedsEngine&lt;TEngine&gt;::drive()</span></a>
+<a name="53"><span class="lineNum">      53 </span><span class="lineCov">        188 : BugTrap::NeedsEngine&lt;TEngine&gt;::drive()</span></a>
 <a name="54"><span class="lineNum">      54 </span>            : {</a>
-<a name="55"><span class="lineNum">      55 </span><span class="lineCov">        172 :    if (!engine_.is_running())</span></a>
+<a name="55"><span class="lineNum">      55 </span><span class="lineCov">        188 :    if (!engine_.is_running())</span></a>
 <a name="56"><span class="lineNum">      56 </span>            :    {</a>
-<a name="57"><span class="lineNum">      57 </span><span class="lineCov">        172 :       engine_.start();</span></a>
+<a name="57"><span class="lineNum">      57 </span><span class="lineCov">        188 :       engine_.start();</span></a>
 <a name="58"><span class="lineNum">      58 </span>            :    }</a>
-<a name="59"><span class="lineNum">      59 </span><span class="lineCov">        172 :    POSTCONDITION(engine_.is_running(),&quot;Drive postcondition failed.&quot;);</span></a>
-<a name="60"><span class="lineNum">      60 </span><span class="lineCov">        172 : }</span></a>
+<a name="59"><span class="lineNum">      59 </span><span class="lineCov">        188 :    POSTCONDITION(engine_.is_running(),&quot;Drive postcondition failed.&quot;);</span></a>
+<a name="60"><span class="lineNum">      60 </span><span class="lineCov">        188 : }</span></a>
 <a name="61"><span class="lineNum">      61 </span>            : </a>
 <a name="62"><span class="lineNum">      62 </span>            : </a>
 <a name="63"><span class="lineNum">      63 </span>            : /**</a>
@@ -123,10 +123,10 @@
 <a name="65"><span class="lineNum">      65 </span>            :  */</a>
 <a name="66"><span class="lineNum">      66 </span>            : template &lt;class TEngine&gt;</a>
 <a name="67"><span class="lineNum">      67 </span>            : void</a>
-<a name="68"><span class="lineNum">      68 </span><span class="lineCov">         86 : BugTrap::NeedsEngine&lt;TEngine&gt;::stop()</span></a>
+<a name="68"><span class="lineNum">      68 </span><span class="lineCov">         94 : BugTrap::NeedsEngine&lt;TEngine&gt;::stop()</span></a>
 <a name="69"><span class="lineNum">      69 </span>            : {</a>
-<a name="70"><span class="lineNum">      70 </span><span class="lineCov">         86 :     engine_.stop();</span></a>
-<a name="71"><span class="lineNum">      71 </span><span class="lineCov">         86 : }</span></a>
+<a name="70"><span class="lineNum">      70 </span><span class="lineCov">         94 :     engine_.stop();</span></a>
+<a name="71"><span class="lineNum">      71 </span><span class="lineCov">         94 : }</span></a>
 <a name="72"><span class="lineNum">      72 </span>            : </a>
 <a name="73"><span class="lineNum">      73 </span>            : /**</a>
 <a name="74"><span class="lineNum">      74 </span>            :    Get the number of cylinders.</a>
@@ -134,9 +134,9 @@
 <a name="76"><span class="lineNum">      76 </span>            :  */</a>
 <a name="77"><span class="lineNum">      77 </span>            : template &lt;class TEngine&gt;</a>
 <a name="78"><span class="lineNum">      78 </span>            : unsigned int</a>
-<a name="79"><span class="lineNum">      79 </span><span class="lineCov">         86 : BugTrap::NeedsEngine&lt;TEngine&gt;::number_of_cylinders() const</span></a>
+<a name="79"><span class="lineNum">      79 </span><span class="lineCov">         94 : BugTrap::NeedsEngine&lt;TEngine&gt;::number_of_cylinders() const</span></a>
 <a name="80"><span class="lineNum">      80 </span>            : {</a>
-<a name="81"><span class="lineNum">      81 </span><span class="lineCov">         86 :    return engine_.number_of_cylinders();</span></a>
+<a name="81"><span class="lineNum">      81 </span><span class="lineCov">         94 :    return engine_.number_of_cylinders();</span></a>
 <a name="82"><span class="lineNum">      82 </span>            : }</a>
 <a name="83"><span class="lineNum">      83 </span>            : </a>
 <a name="84"><span class="lineNum">      84 </span>            : </a>
@@ -147,9 +147,9 @@
 <a name="89"><span class="lineNum">      89 </span>            : template &lt;class TEngine&gt;</a>
 <a name="90"><span class="lineNum">      90 </span>            : inline</a>
 <a name="91"><span class="lineNum">      91 </span>            : bool</a>
-<a name="92"><span class="lineNum">      92 </span><span class="lineCov">        258 : BugTrap::NeedsEngine&lt;TEngine&gt;::engine_is_running() const</span></a>
+<a name="92"><span class="lineNum">      92 </span><span class="lineCov">        282 : BugTrap::NeedsEngine&lt;TEngine&gt;::engine_is_running() const</span></a>
 <a name="93"><span class="lineNum">      93 </span>            : {</a>
-<a name="94"><span class="lineNum">      94 </span><span class="lineCov">        258 :     return engine_.is_running();</span></a>
+<a name="94"><span class="lineNum">      94 </span><span class="lineCov">        282 :     return engine_.is_running();</span></a>
 <a name="95"><span class="lineNum">      95 </span>            : }</a>
 <a name="96"><span class="lineNum">      96 </span>            : </a>
 <a name="97"><span class="lineNum">      97 </span>            : </a>
